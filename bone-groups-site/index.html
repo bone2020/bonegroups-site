@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bone Groups of Companies</title>
+  <meta name="description" content="Bone Groups is a multi‑company ecosystem delivering cashless payments, e‑commerce, sustainable agriculture, and affordable connectivity across Ghana and beyond." />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: "#F27C00",
+            branddark: "#0B0F14",
+            brandtint: "#FFF3E6",
+            brandtint2: "#FFF7ED"
+          },
+          borderRadius: {
+            '2xl': '1rem',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="text-gray-900 font-sans">
+  <!-- Navbar -->
+  <nav id="top" class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur">
+    <div class="mx-auto max-w-7xl px-6 py-3 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2 font-semibold">
+        <div class="h-9 w-9 rounded-2xl bg-brand text-white grid place-content-center">BG</div>
+        <span class="text-lg"><span class="font-semibold text-brand">BONE</span> <span class="text-branddark">GROUPS</span> <span class="hidden sm:inline text-gray-600">of Companies</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="#about" class="text-sm text-gray-600 hover:text-gray-900">About</a>
+        <a href="#subsidiaries" class="text-sm text-gray-600 hover:text-gray-900">Subsidiaries</a>
+        <a href="#values" class="text-sm text-gray-600 hover:text-gray-900">Mission & Values</a>
+        <a href="#roadmap" class="text-sm text-gray-600 hover:text-gray-900">Roadmap</a>
+        <a href="#contact" class="text-sm text-gray-600 hover:text-gray-900">Contact</a>
+        <a href="#contact" class="rounded-2xl bg-brand text-white px-4 py-2 text-sm">Get in touch</a>
+      </div>
+      <button id="menuBtn" aria-label="Menu" class="md:hidden p-2 rounded border border-gray-200">☰</button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-3 flex flex-col gap-2">
+        <a href="#about" class="py-2 text-gray-700">About</a>
+        <a href="#subsidiaries" class="py-2 text-gray-700">Subsidiaries</a>
+        <a href="#values" class="py-2 text-gray-700">Mission & Values</a>
+        <a href="#roadmap" class="py-2 text-gray-700">Roadmap</a>
+        <a href="#contact" class="py-2 text-gray-700">Contact</a>
+        <a href="#contact" class="w-full rounded-2xl bg-brand text-white px-4 py-2 text-center">Get in touch</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-28 py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-6 grid gap-10 md:grid-cols-2 md:items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Building Africa’s digital & real‑world economy</h1>
+        <p class="mt-4 text-lg text-gray-600">Bone Groups is a multi‑company ecosystem delivering cashless payments, e‑commerce, sustainable agriculture, and affordable connectivity across Ghana and beyond.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#subsidiaries" class="rounded-2xl bg-brand text-white px-5 py-3 text-sm font-medium">Explore our companies →</a>
+          <a href="#contact" class="rounded-2xl border border-brand bg-brandtint text-brand px-5 py-3 text-sm font-medium">Partner with us</a>
+        </div>
+        <div class="mt-6 flex flex-wrap items-center gap-3 text-sm text-gray-500">
+          <span class="rounded-xl bg-brandtint text-brand px-3 py-1">Dubai, UAE • Accra, Ghana</span>
+          <span>• Security‑first design</span>
+          <span>• Community impact</span>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="aspect-[4/3] w-full rounded-3xl border bg-gradient-to-br from-gray-50 to-white shadow-sm grid place-content-center">
+          <div class="grid grid-cols-2 gap-4 p-8">
+            <div class="rounded-2xl border p-4">
+              <div class="text-brand font-semibold">QR Wallet</div>
+              <div class="text-sm text-gray-500">Cashless payments</div>
+            </div>
+            <div class="rounded-2xl border p-4">
+              <div class="text-brand font-semibold">Amazing Shop</div>
+              <div class="text-sm text-gray-500">E‑commerce</div>
+            </div>
+            <div class="rounded-2xl border p-4">
+              <div class="text-brand font-semibold">Bone Farms</div>
+              <div class="text-sm text-gray-500">Agri‑exports</div>
+            </div>
+            <div class="rounded-2xl border p-4">
+              <div class="text-brand font-semibold">BoneConnect</div>
+              <div class="text-sm text-gray-500">Connectivity</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl font-semibold tracking-tight">About Bone Groups</h2>
+        <p class="mt-4 text-gray-600">We’re an independent group headquartered in Dubai with operations anchored in Ghana. Our mission is to create practical, trusted products that move money, goods, and opportunities—securely and affordably.</p>
+        <ul class="mt-6 grid gap-3 md:grid-cols-2 text-gray-700">
+          <li class="flex items-center gap-3"><span class="text-brand">●</span> African‑first, global standards</li>
+          <li class="flex items-center gap-3"><span class="text-brand">●</span> Security & compliance by design</li>
+          <li class="flex items-center gap-3"><span class="text-brand">●</span> Built with communities and SMEs</li>
+          <li class="flex items-center gap-3"><span class="text-brand">●</span> Lean, efficient operations</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subsidiaries -->
+  <section id="subsidiaries" class="py-16 md:py-24" style="background-color:#FFF7ED">
+    <div class="mx-auto max-w-7xl px-6">
+      <h2 class="text-3xl font-semibold tracking-tight">Our Companies</h2>
+      <p class="mt-3 max-w-2xl text-gray-600">Four focused businesses, one mission: removing friction so people can trade, learn, and grow.</p>
+      <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <!-- Card -->
+        <div class="rounded-3xl border p-6 bg-white">
+          <div class="flex items-center justify-between">
+            <div class="font-semibold flex items-center gap-2"><span class="text-brand">▣</span> QR Wallet</div>
+            <span class="rounded-xl bg-brandtint text-brand px-2 py-1 text-xs">Active</span>
+          </div>
+          <p class="mt-3 text-gray-600">Cashless payments via QR codes with bank & mobile‑money integrations.</p>
+          <ul class="mt-3 text-sm text-gray-700 space-y-2">
+            <li class="flex items-center gap-2">✓ Instant QR payments</li>
+            <li class="flex items-center gap-2">✓ Bank & MoMo support</li>
+            <li class="flex items-center gap-2">✓ Offline QR generation</li>
+          </ul>
+          <a href="#" class="mt-5 block rounded-2xl border border-brand bg-brandtint text-center text-brand px-4 py-2">Discover QR Wallet →</a>
+        </div>
+        <!-- Card -->
+        <div class="rounded-3xl border p-6 bg-white">
+          <div class="flex items-center justify-between">
+            <div class="font-semibold flex items-center gap-2"><span class="text-brand">▣</span> Amazing Online Shop</div>
+            <span class="rounded-xl bg-brandtint text-brand px-2 py-1 text-xs">Active</span>
+          </div>
+          <p class="mt-3 text-gray-600">Marketplace for SMEs with seamless QR Wallet checkout and delivery partners.</p>
+          <ul class="mt-3 text-sm text-gray-700 space-y-2">
+            <li class="flex items-center gap-2">✓ Seller tools</li>
+            <li class="flex items-center gap-2">✓ QR checkout</li>
+            <li class="flex items-center gap-2">✓ Escrow‑style flows</li>
+          </ul>
+          <a href="#" class="mt-5 block rounded-2xl border border-brand bg-brandtint text-center text-brand px-4 py-2">Visit the Shop →</a>
+        </div>
+        <!-- Card -->
+        <div class="rounded-3xl border p-6 bg-white">
+          <div class="flex items-center justify-between">
+            <div class="font-semibold flex items-center gap-2"><span class="text-brand">▣</span> Bone Farms</div>
+            <span class="rounded-xl bg-brandtint text-brand px-2 py-1 text-xs">Active</span>
+          </div>
+          <p class="mt-3 text-gray-600">Export‑grade produce: avocados, mangoes, coconuts, and fish farming.</p>
+          <ul class="mt-3 text-sm text-gray-700 space-y-2">
+            <li class="flex items-center gap-2">✓ Traceability</li>
+            <li class="flex items-center gap-2">✓ Cold‑chain partners</li>
+            <li class="flex items-center gap-2">✓ Outgrower network</li>
+          </ul>
+          <a href="#" class="mt-5 block rounded-2xl border border-brand bg-brandtint text-center text-brand px-4 py-2">Explore Bone Farms →</a>
+        </div>
+        <!-- Card -->
+        <div class="rounded-3xl border p-6 bg-white">
+          <div class="flex items-center justify-between">
+            <div class="font-semibold flex items-center gap-2"><span class="text-brand">▣</span> BoneConnect</div>
+            <span class="rounded-xl bg-brandtint text-brand px-2 py-1 text-xs">Active</span>
+          </div>
+          <p class="mt-3 text-gray-600">Affordable internet initiatives for schools and rural communities.</p>
+          <ul class="mt-3 text-sm text-gray-700 space-y-2">
+            <li class="flex items-center gap-2">✓ School Wi‑Fi</li>
+            <li class="flex items-center gap-2">✓ Hybrid backhaul</li>
+            <li class="flex items-center gap-2">✓ Student bundles</li>
+          </ul>
+          <a href="#" class="mt-5 block rounded-2xl border border-brand bg-brandtint text-center text-brand px-4 py-2">See Connectivity Plan →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section id="values" class="py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-6 grid gap-8 md:grid-cols-3">
+      <div class="rounded-3xl border p-6">
+        <div class="font-semibold">Mission</div>
+        <p class="mt-3 text-gray-600">To empower individuals and businesses with secure payments, modern commerce, sustainable food systems, and affordable internet.</p>
+      </div>
+      <div class="rounded-3xl border p-6">
+        <div class="font-semibold">Vision</div>
+        <p class="mt-3 text-gray-600">An Africa where opportunity is evenly distributed—because access to money movement, markets, and connectivity is universal.</p>
+      </div>
+      <div class="rounded-3xl border p-6">
+        <div class="font-semibold">Values</div>
+        <ul class="mt-3 text-gray-700 space-y-2">
+          <li class="flex gap-2">✓ Integrity & compliance first</li>
+          <li class="flex gap-2">✓ Customer obsession</li>
+          <li class="flex gap-2">✓ Build local, meet global standards</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap" class="py-16 md:py-24" style="background-color:#FFF7ED">
+    <div class="mx-auto max-w-7xl px-6">
+      <h2 class="text-3xl font-semibold tracking-tight">Roadmap</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="rounded-3xl border p-6 bg-white">
+          <div class="font-semibold">Q4 2025</div>
+          <ul class="mt-3 text-gray-700 space-y-2">
+            <li class="flex gap-2">→ Pilot QR Wallet with bank & MoMo partners</li>
+            <li class="flex gap-2">→ Launch Amazing Shop MVP</li>
+            <li class="flex gap-2">→ Farm outgrower onboarding</li>
+          </ul>
+        </div>
+        <div class="rounded-3xl border p-6 bg-white">
+          <div class="font-semibold">Q1 2026</div>
+          <ul class="mt-3 text-gray-700 space-y-2">
+            <li class="flex gap-2">→ Public QR Wallet launch in Ghana</li>
+            <li class="flex gap-2">→ Export pipeline for mango & avocado</li>
+            <li class="flex gap-2">→ Connectivity PoC in 3 schools</li>
+          </ul>
+        </div>
+        <div class="rounded-3xl border p-6 bg-white">
+          <div class="font-semibold">Q2 2026</div>
+          <ul class="mt-3 text-gray-700 space-y-2">
+            <li class="flex gap-2">→ Shop vendor growth to 500+</li>
+            <li class="flex gap-2">→ BoneConnect student bundles</li>
+            <li class="flex gap-2">→ Regional expansion planning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-6 grid gap-8 md:grid-cols-2">
+      <div>
+        <h2 class="text-3xl font-semibold tracking-tight">Let’s build together</h2>
+        <p class="mt-3 text-gray-600">Partners, suppliers, investors, and schools—we’d love to hear from you.</p>
+        <div class="mt-6 space-y-3 text-gray-700">
+          <a class="flex items-center gap-3" href="mailto:info@bongroups.co">✉ info@bongroups.co</a>
+          <div class="flex items-center gap-3">☎ +233 (0) ———— / +971 (0) ————</div>
+          <div class="flex items-center gap-3">📍 Accra • Dubai</div>
+        </div>
+      </div>
+      <div class="rounded-3xl border p-6 bg-white">
+        <div class="font-semibold mb-3">Contact form</div>
+        <form onsubmit="event.preventDefault(); alert('Thanks! We\'ll get back to you.');" class="space-y-3">
+          <input required placeholder="Full name" class="w-full rounded-2xl border px-4 py-2" />
+          <input required type="email" placeholder="Email" class="w-full rounded-2xl border px-4 py-2" />
+          <input placeholder="Company / Organization" class="w-full rounded-2xl border px-4 py-2" />
+          <textarea required placeholder="How can we help?" class="w-full rounded-2xl border px-4 py-2 min-h-[120px]"></textarea>
+          <button type="submit" class="rounded-2xl bg-brand text-white px-4 py-2">Send message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t py-10">
+    <div class="mx-auto max-w-7xl px-6 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+      <div class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-2xl bg-brand text-white grid place-content-center">BG</div>
+        <div>
+          <div class="font-semibold">Bone Groups of Companies</div>
+          <div class="text-sm text-gray-500">© <span id="year"></span> All rights reserved.</div>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm text-gray-600">
+        <a href="#about" class="hover:text-gray-900">About</a>
+        <a href="#subsidiaries" class="hover:text-gray-900">Subsidiaries</a>
+        <a href="#values" class="hover:text-gray-900">Mission</a>
+        <a href="#roadmap" class="hover:text-gray-900">Roadmap</a>
+        <a href="#contact" class="hover:text-gray-900">Contact</a>
+        <a href="#" class="hover:text-gray-900">Privacy</a>
+        <a href="#" class="hover:text-gray-900">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTA -->
+  <a href="#contact" class="fixed bottom-6 right-6 rounded-full border border-brand bg-white shadow-lg px-4 py-3">Chat with us</a>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menuBtn').addEventListener('click', () => {
+      const m = document.getElementById('mobileMenu');
+      m.classList.toggle('hidden');
+    });
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
