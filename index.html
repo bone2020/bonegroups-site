@@ -7,43 +7,39 @@
   <meta name="description" content="Bone Groups is a multi‑company ecosystem delivering cashless payments, e‑commerce, sustainable agriculture, and affordable connectivity across Ghana and beyond." />
 
   <!-- Canonical URL - UPDATE with your actual domain -->
-  <link rel="canonical" href="https://bonegroups.co/" />
+  <link rel="canonical" href="https://bongroups.com/" />
 
-  <!-- Favicon - UPDATE with your actual favicon -->
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23F27C00' rx='20' width='100' height='100'/><text x='50' y='67' font-size='50' text-anchor='middle' fill='white' font-family='system-ui'>BG</text></svg>" />
   <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23F27C00' rx='20' width='100' height='100'/><text x='50' y='67' font-size='50' text-anchor='middle' fill='white' font-family='system-ui'>BG</text></svg>" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://bonegroups.co/" />
+  <meta property="og:url" content="https://bongroups.com/" />
   <meta property="og:title" content="Bone Groups of Companies | Building Africa's Digital Economy" />
   <meta property="og:description" content="Multi‑company ecosystem delivering cashless payments, e‑commerce, sustainable agriculture, and affordable connectivity across Ghana and beyond." />
-  <meta property="og:image" content="https://bonegroups.co/og-image.png" />
+  <meta property="og:image" content="https://bongroups.com/og-image.png" />
   <meta property="og:site_name" content="Bone Groups of Companies" />
   <meta property="og:locale" content="en_US" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://bonegroups.co/" />
+  <meta name="twitter:url" content="https://bongroups.com/" />
   <meta name="twitter:title" content="Bone Groups of Companies | Building Africa's Digital Economy" />
   <meta name="twitter:description" content="Multi‑company ecosystem delivering cashless payments, e‑commerce, sustainable agriculture, and affordable connectivity across Ghana and beyond." />
-  <meta name="twitter:image" content="https://bonegroups.co/og-image.png" />
+  <meta name="twitter:image" content="https://bongroups.com/og-image.png" />
 
   <!-- Additional SEO -->
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Bone Groups of Companies" />
   <meta name="keywords" content="QR payments, mobile money, Ghana fintech, e-commerce Africa, sustainable agriculture, connectivity, Bone Groups" />
 
-  <!-- Security Meta Tags -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
-  <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <!-- CSP - Allows Tailwind CDN; tighten for production -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self'; frame-ancestors 'self';" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
-  <!-- NOTE: For production, replace with a bundled Tailwind build for better security and performance -->
-  <!-- The Play CDN is for development only and doesn't support SRI hashes -->
   <link rel="preconnect" href="https://cdn.tailwindcss.com" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -53,11 +49,17 @@
           colors: {
             brand: "#F27C00",
             branddark: "#0B0F14",
+            brandlight: "#FF9A3C",
             brandtint: "#FFF3E6",
             brandtint2: "#FFF7ED"
           },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Poppins', 'system-ui', 'sans-serif'],
+          },
           borderRadius: {
             '2xl': '1rem',
+            '3xl': '1.5rem',
           }
         }
       }
@@ -65,6 +67,88 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
+    
+    /* Custom animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-fade-in-up {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+    
+    /* Gradient text */
+    .gradient-text {
+      background: linear-gradient(135deg, #F27C00 0%, #FF9A3C 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Button hover effects */
+    .btn-primary {
+      background: linear-gradient(135deg, #F27C00 0%, #FF9A3C 100%);
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(242, 124, 0, 0.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(242, 124, 0, 0.4);
+    }
+    
+    .btn-secondary {
+      transition: all 0.3s ease;
+    }
+    .btn-secondary:hover {
+      background-color: #F27C00;
+      color: white;
+      transform: translateY(-2px);
+    }
+    
+    /* Card hover effects */
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Custom bullet points */
+    .custom-bullet {
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    .custom-bullet::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #F27C00;
+    }
+    
+    /* Check mark styling */
+    .check-item {
+      position: relative;
+      padding-left: 1.75rem;
+    }
+    .check-item::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #F27C00;
+      font-weight: 600;
+    }
   </style>
 
   <!-- Structured Data - Organization Schema -->
@@ -74,8 +158,8 @@
     "@type": "Organization",
     "name": "Bone Groups of Companies",
     "alternateName": "Bone Groups",
-    "url": "https://bonegroups.co",
-    "logo": "https://bonegroups.co/logo.png",
+    "url": "https://bongroups.com",
+    "logo": "https://bongroups.com/logo.png",
     "description": "Multi-company ecosystem delivering cashless payments, e-commerce, sustainable agriculture, and affordable connectivity across Ghana and beyond.",
     "foundingLocation": {
       "@type": "Place",
@@ -113,296 +197,531 @@
   }
   </script>
 </head>
-<body class="text-gray-900 font-sans">
+<body class="text-gray-900 font-sans antialiased">
   <!-- Skip to main content link for accessibility -->
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-brand focus:text-white focus:px-4 focus:py-2 focus:rounded-2xl">Skip to main content</a>
 
   <!-- Navbar -->
-  <nav id="top" class="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur">
-    <div class="mx-auto max-w-7xl px-6 py-3 flex items-center justify-between">
-      <a href="#top" class="flex items-center gap-2 font-semibold">
-        <div class="h-9 w-9 rounded-2xl bg-brand text-white grid place-content-center">BG</div>
-        <span class="text-lg"><span class="font-semibold text-brand">BONE</span> <span class="text-branddark">GROUPS</span> <span class="hidden sm:inline text-gray-600">of Companies</span></span>
+  <nav id="top" class="fixed inset-x-0 top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 py-3 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2 font-semibold group">
+        <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-brand to-brandlight text-white grid place-content-center font-display font-bold shadow-md group-hover:shadow-lg transition-shadow">BG</div>
+        <span class="text-lg"><span class="font-bold gradient-text">BONE</span> <span class="text-branddark font-semibold">GROUPS</span> <span class="hidden sm:inline text-gray-500 font-normal">of Companies</span></span>
       </a>
-      <div class="hidden md:flex items-center gap-6">
-        <a href="#about" class="text-sm text-gray-600 hover:text-gray-900">About</a>
-        <a href="#subsidiaries" class="text-sm text-gray-600 hover:text-gray-900">Subsidiaries</a>
-        <a href="#values" class="text-sm text-gray-600 hover:text-gray-900">Mission & Values</a>
-        <a href="#roadmap" class="text-sm text-gray-600 hover:text-gray-900">Roadmap</a>
-        <a href="#contact" class="text-sm text-gray-600 hover:text-gray-900">Contact</a>
-        <a href="#contact" class="rounded-2xl bg-brand text-white px-4 py-2 text-sm">Get in touch</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#about" class="text-sm text-gray-600 hover:text-brand transition-colors font-medium">About</a>
+        <a href="#subsidiaries" class="text-sm text-gray-600 hover:text-brand transition-colors font-medium">Subsidiaries</a>
+        <a href="#values" class="text-sm text-gray-600 hover:text-brand transition-colors font-medium">Mission & Values</a>
+        <a href="#roadmap" class="text-sm text-gray-600 hover:text-brand transition-colors font-medium">Roadmap</a>
+        <a href="#contact" class="text-sm text-gray-600 hover:text-brand transition-colors font-medium">Contact</a>
+        <a href="#contact" class="btn-primary rounded-xl text-white px-5 py-2.5 text-sm font-semibold">Get in touch</a>
       </div>
-      <button id="menuBtn" aria-label="Menu" class="md:hidden p-2 rounded border border-gray-200">☰</button>
+      <button id="menuBtn" aria-label="Menu" class="md:hidden p-2 rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </div>
     <div id="mobileMenu" class="hidden md:hidden border-t bg-white">
-      <div class="mx-auto max-w-7xl px-6 py-3 flex flex-col gap-2">
-        <a href="#about" class="py-2 text-gray-700">About</a>
-        <a href="#subsidiaries" class="py-2 text-gray-700">Subsidiaries</a>
-        <a href="#values" class="py-2 text-gray-700">Mission & Values</a>
-        <a href="#roadmap" class="py-2 text-gray-700">Roadmap</a>
-        <a href="#contact" class="py-2 text-gray-700">Contact</a>
-        <a href="#contact" class="w-full rounded-2xl bg-brand text-white px-4 py-2 text-center">Get in touch</a>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 py-4 flex flex-col gap-1">
+        <a href="#about" class="py-3 px-4 text-gray-700 hover:bg-brandtint hover:text-brand rounded-xl transition-colors">About</a>
+        <a href="#subsidiaries" class="py-3 px-4 text-gray-700 hover:bg-brandtint hover:text-brand rounded-xl transition-colors">Subsidiaries</a>
+        <a href="#values" class="py-3 px-4 text-gray-700 hover:bg-brandtint hover:text-brand rounded-xl transition-colors">Mission & Values</a>
+        <a href="#roadmap" class="py-3 px-4 text-gray-700 hover:bg-brandtint hover:text-brand rounded-xl transition-colors">Roadmap</a>
+        <a href="#contact" class="py-3 px-4 text-gray-700 hover:bg-brandtint hover:text-brand rounded-xl transition-colors">Contact</a>
+        <a href="#contact" class="mt-2 btn-primary w-full rounded-xl text-white px-5 py-3 text-center font-semibold">Get in touch</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Banner -->
   <main id="main">
-  <section class="pt-20 pb-4">
-    <div class="mx-auto max-w-7xl px-6">
-      <img src="images/Bone groups of companies .png" alt="Bone Groups of Companies" class="w-full max-h-32 object-contain" />
-    </div>
-  </section>
-
-  <!-- Hero Content -->
-  <section class="py-16 md:py-24">
-    <div class="mx-auto max-w-7xl px-6 grid gap-10 md:grid-cols-2 md:items-center">
-      <div>
-        <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Building Africa’s digital & real‑world economy</h1>
-        <p class="mt-4 text-lg text-gray-600">Bone Groups is a multi‑company ecosystem delivering cashless payments, e‑commerce, sustainable agriculture, and affordable connectivity across Ghana and beyond.</p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#subsidiaries" class="rounded-2xl bg-brand text-white px-5 py-3 text-sm font-medium">Explore our companies →</a>
-          <a href="#contact" class="rounded-2xl border border-brand bg-brandtint text-brand px-5 py-3 text-sm font-medium">Partner with us</a>
-        </div>
-        <div class="mt-6 flex flex-wrap items-center gap-3 text-sm text-gray-600">
-          <span class="rounded-xl bg-brandtint text-brand px-3 py-1">Accra, Ghana</span>
-          <span>• Security‑first design</span>
-          <span>• Community impact</span>
-        </div>
+    <!-- Hero Banner - Full width, logo centered and visible -->
+    <section class="pt-16 bg-gray-100">
+      <div class="w-full px-4 sm:px-6 py-2 sm:py-3">
+        <img 
+          src="images/Bone groups of companies .png" 
+          alt="Bone Groups of Companies Logo" 
+          class="w-full max-w-3xl mx-auto h-auto object-contain"
+        />
       </div>
-      <div class="relative">
-        <div class="aspect-[4/3] w-full rounded-3xl border bg-gradient-to-br from-gray-50 to-white shadow-sm grid place-content-center">
-          <div class="grid grid-cols-2 gap-4 p-8">
-            <div class="rounded-2xl border p-4">
-              <div class="text-brand font-semibold">QR Wallet</div>
-              <div class="text-sm text-gray-600">Cashless payments</div>
+    </section>
+
+    <!-- Hero Content -->
+    <section class="py-16 md:py-24 bg-gradient-to-b from-white to-brandtint2">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 grid gap-12 lg:grid-cols-2 lg:items-center">
+        <div class="animate-fade-in-up">
+          <div class="inline-flex items-center gap-2 rounded-full bg-brandtint px-4 py-1.5 text-sm text-brand font-medium mb-6">
+            <span class="w-2 h-2 bg-brand rounded-full animate-pulse"></span>
+            Now Building in Ghana
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight leading-tight">
+            Building Africa's <span class="gradient-text">digital & real‑world</span> economy
+          </h1>
+          <p class="mt-6 text-lg text-gray-600 leading-relaxed max-w-xl">
+            Bone Groups is a multi‑company ecosystem delivering cashless payments, e‑commerce, sustainable agriculture, and affordable connectivity across Ghana and beyond.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#subsidiaries" class="btn-primary rounded-xl text-white px-6 py-3.5 font-semibold inline-flex items-center gap-2">
+              Explore our companies
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+              </svg>
+            </a>
+            <a href="#contact" class="btn-secondary rounded-xl border-2 border-brand text-brand px-6 py-3.5 font-semibold">
+              Partner with us
+            </a>
+          </div>
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            <span class="inline-flex items-center gap-2 rounded-lg bg-white shadow-sm border px-3 py-2 text-sm">
+              <svg class="w-4 h-4 text-brand" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+              </svg>
+              Accra, Ghana
+            </span>
+            <span class="inline-flex items-center gap-2 text-sm text-gray-600">
+              <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              Security‑first design
+            </span>
+            <span class="inline-flex items-center gap-2 text-sm text-gray-600">
+              <svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+              </svg>
+              Community impact
+            </span>
+          </div>
+        </div>
+        <div class="relative animate-fade-in-up" style="animation-delay: 0.2s;">
+          <div class="absolute inset-0 bg-gradient-to-br from-brand/20 to-brandlight/20 rounded-3xl blur-3xl"></div>
+          <div class="relative bg-white rounded-3xl border shadow-xl p-6 sm:p-8">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="card-hover rounded-2xl border-2 border-yellow-200 bg-yellow-50 p-5">
+                <div class="w-10 h-10 rounded-xl bg-yellow-400 flex items-center justify-center mb-3">
+                  <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                  </svg>
+                </div>
+                <div class="font-semibold text-gray-900">QR Wallet</div>
+                <div class="text-sm text-gray-500 mt-1">Cashless payments</div>
+              </div>
+              <div class="card-hover rounded-2xl border-2 border-gray-200 bg-gray-50 p-5">
+                <div class="w-10 h-10 rounded-xl bg-gray-700 flex items-center justify-center mb-3">
+                  <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
+                  </svg>
+                </div>
+                <div class="font-semibold text-gray-900">Bone Shopping</div>
+                <div class="text-sm text-gray-500 mt-1">E‑commerce</div>
+              </div>
+              <div class="card-hover rounded-2xl border-2 border-green-200 bg-green-50 p-5">
+                <div class="w-10 h-10 rounded-xl bg-green-500 flex items-center justify-center mb-3">
+                  <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <div class="font-semibold text-gray-900">Bone Farms</div>
+                <div class="text-sm text-gray-500 mt-1">Agri‑exports</div>
+              </div>
+              <div class="card-hover rounded-2xl border-2 border-blue-200 bg-blue-50 p-5">
+                <div class="w-10 h-10 rounded-xl bg-blue-500 flex items-center justify-center mb-3">
+                  <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <div class="font-semibold text-gray-900">BoneConnect</div>
+                <div class="text-sm text-gray-500 mt-1">Connectivity</div>
+              </div>
             </div>
-            <div class="rounded-2xl border p-4">
-              <div class="text-brand font-semibold">Bone On Open Shopping</div>
-              <div class="text-sm text-gray-600">E‑commerce</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 md:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="max-w-3xl">
+          <span class="text-brand font-semibold text-sm uppercase tracking-wider">About Us</span>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-display font-bold tracking-tight">About Bone Groups</h2>
+          <p class="mt-6 text-lg text-gray-600 leading-relaxed">
+            We're an independent group headquartered in Ghana. Our mission is to create practical, trusted products that move money, goods, and opportunities—securely and affordably.
+          </p>
+          <div class="mt-10 grid gap-4 sm:grid-cols-2">
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-brandtint">
+              <div class="w-10 h-10 rounded-lg bg-brand flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">African‑first, global standards</div>
+                <div class="text-sm text-gray-600 mt-1">Built for Africa, meeting international quality</div>
+              </div>
             </div>
-            <div class="rounded-2xl border p-4">
-              <div class="text-brand font-semibold">Bone Farms</div>
-              <div class="text-sm text-gray-600">Agri‑exports</div>
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-brandtint">
+              <div class="w-10 h-10 rounded-lg bg-brand flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">Security & compliance by design</div>
+                <div class="text-sm text-gray-600 mt-1">Your safety is our top priority</div>
+              </div>
             </div>
-            <div class="rounded-2xl border p-4">
-              <div class="text-brand font-semibold">BoneConnect</div>
-              <div class="text-sm text-gray-600">Connectivity</div>
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-brandtint">
+              <div class="w-10 h-10 rounded-lg bg-brand flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">Built with communities and SMEs</div>
+                <div class="text-sm text-gray-600 mt-1">Empowering local businesses</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 rounded-xl bg-brandtint">
+              <div class="w-10 h-10 rounded-lg bg-brand flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">Lean, efficient operations</div>
+                <div class="text-sm text-gray-600 mt-1">Maximizing impact, minimizing waste</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About -->
-  <section id="about" class="py-16 md:py-24">
-    <div class="mx-auto max-w-7xl px-6">
-      <div class="max-w-3xl">
-        <h2 class="text-3xl font-semibold tracking-tight">About Bone Groups</h2>
-        <p class="mt-4 text-gray-600">We're an independent group headquartered in Ghana. Our mission is to create practical, trusted products that move money, goods, and opportunities—securely and affordably.</p>
-        <ul class="mt-6 grid gap-3 md:grid-cols-2 text-gray-700">
-          <li class="flex items-center gap-3"><span class="text-brand">●</span> African‑first, global standards</li>
-          <li class="flex items-center gap-3"><span class="text-brand">●</span> Security & compliance by design</li>
-          <li class="flex items-center gap-3"><span class="text-brand">●</span> Built with communities and SMEs</li>
-          <li class="flex items-center gap-3"><span class="text-brand">●</span> Lean, efficient operations</li>
-        </ul>
+    <!-- Subsidiaries -->
+    <section id="subsidiaries" class="py-20 md:py-28 bg-gradient-to-b from-brandtint2 to-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto">
+          <span class="text-brand font-semibold text-sm uppercase tracking-wider">Our Portfolio</span>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-display font-bold tracking-tight">Our Companies</h2>
+          <p class="mt-4 text-lg text-gray-600">Four focused businesses, one mission: removing friction so people can trade, learn, and grow.</p>
+        </div>
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Card: QR Wallet -->
+          <div class="card-hover rounded-3xl border bg-white p-6 shadow-sm">
+            <img src="images/yellow QR wallet image.png" alt="QR Wallet Logo" class="w-full h-32 object-contain rounded-2xl mb-4" />
+            <div class="flex items-center justify-between">
+              <div class="font-semibold text-lg">QR Wallet</div>
+              <span class="rounded-full bg-green-100 text-green-700 px-3 py-1 text-xs font-medium">Active</span>
+            </div>
+            <p class="mt-3 text-gray-600 text-sm">Cashless payments via QR codes with bank & mobile‑money integrations.</p>
+            <ul class="mt-4 text-sm text-gray-700 space-y-2">
+              <li class="check-item">Instant QR payments</li>
+              <li class="check-item">Bank & MoMo support</li>
+              <li class="check-item">Offline QR generation</li>
+            </ul>
+            <a href="#" class="mt-5 block btn-secondary rounded-xl border-2 border-brand text-center text-brand px-4 py-2.5 font-medium">Discover QR Wallet →</a>
+          </div>
+          <!-- Card: Bone On Open Shopping -->
+          <div class="card-hover rounded-3xl border bg-white p-6 shadow-sm">
+            <img src="images/black shopping cart image.PNG" alt="Bone On Open Shopping Logo" class="w-full h-32 object-contain rounded-2xl mb-4" />
+            <div class="flex items-center justify-between">
+              <div class="font-semibold text-lg">Bone Shopping</div>
+              <span class="rounded-full bg-green-100 text-green-700 px-3 py-1 text-xs font-medium">Active</span>
+            </div>
+            <p class="mt-3 text-gray-600 text-sm">Marketplace for SMEs with seamless QR Wallet checkout and delivery partners.</p>
+            <ul class="mt-4 text-sm text-gray-700 space-y-2">
+              <li class="check-item">Seller tools</li>
+              <li class="check-item">QR checkout</li>
+              <li class="check-item">Escrow‑style flows</li>
+            </ul>
+            <a href="#" class="mt-5 block btn-secondary rounded-xl border-2 border-brand text-center text-brand px-4 py-2.5 font-medium">Visit the Shop →</a>
+          </div>
+          <!-- Card: Bone Farms -->
+          <div class="card-hover rounded-3xl border bg-white p-6 shadow-sm">
+            <img src="images/green farm image.png" alt="Bone Farms Logo" class="w-full h-32 object-contain rounded-2xl mb-4" />
+            <div class="flex items-center justify-between">
+              <div class="font-semibold text-lg">Bone Farms</div>
+              <span class="rounded-full bg-green-100 text-green-700 px-3 py-1 text-xs font-medium">Active</span>
+            </div>
+            <p class="mt-3 text-gray-600 text-sm">Export‑grade produce: avocados, mangoes, coconuts, and fish farming.</p>
+            <ul class="mt-4 text-sm text-gray-700 space-y-2">
+              <li class="check-item">Traceability</li>
+              <li class="check-item">Cold‑chain partners</li>
+              <li class="check-item">Outgrower network</li>
+            </ul>
+            <a href="#" class="mt-5 block btn-secondary rounded-xl border-2 border-brand text-center text-brand px-4 py-2.5 font-medium">Explore Bone Farms →</a>
+          </div>
+          <!-- Card: BoneConnect -->
+          <div class="card-hover rounded-3xl border bg-white p-6 shadow-sm">
+            <img src="images/blue connectivity globe.png" alt="BoneConnect Logo" class="w-full h-32 object-contain rounded-2xl mb-4" />
+            <div class="flex items-center justify-between">
+              <div class="font-semibold text-lg">BoneConnect</div>
+              <span class="rounded-full bg-green-100 text-green-700 px-3 py-1 text-xs font-medium">Active</span>
+            </div>
+            <p class="mt-3 text-gray-600 text-sm">Affordable internet initiatives for schools and rural communities.</p>
+            <ul class="mt-4 text-sm text-gray-700 space-y-2">
+              <li class="check-item">School Wi‑Fi</li>
+              <li class="check-item">Hybrid backhaul</li>
+              <li class="check-item">Student bundles</li>
+            </ul>
+            <a href="#" class="mt-5 block btn-secondary rounded-xl border-2 border-brand text-center text-brand px-4 py-2.5 font-medium">See Connectivity Plan →</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Subsidiaries -->
-  <section id="subsidiaries" class="py-16 md:py-24" style="background-color:#FFF7ED">
-    <div class="mx-auto max-w-7xl px-6">
-      <h2 class="text-3xl font-semibold tracking-tight">Our Companies</h2>
-      <p class="mt-3 max-w-2xl text-gray-600">Four focused businesses, one mission: removing friction so people can trade, learn, and grow.</p>
-      <div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        <!-- Card: QR Wallet -->
-        <div class="rounded-3xl border p-6 bg-white">
-          <img src="images/yellow QR wallet image.png" alt="QR Wallet Logo" class="w-full h-32 object-contain rounded-2xl mb-4" />
-          <div class="flex items-center justify-between">
-            <div class="font-semibold">QR Wallet</div>
-            <span class="rounded-xl bg-brandtint text-brand px-2 py-1 text-xs">Active</span>
-          </div>
-          <p class="mt-3 text-gray-600">Cashless payments via QR codes with bank & mobile‑money integrations.</p>
-          <ul class="mt-3 text-sm text-gray-700 space-y-2">
-            <li class="flex items-center gap-2">✓ Instant QR payments</li>
-            <li class="flex items-center gap-2">✓ Bank & MoMo support</li>
-            <li class="flex items-center gap-2">✓ Offline QR generation</li>
-          </ul>
-          <a href="#" class="mt-5 block rounded-2xl border border-brand bg-brandtint text-center text-brand px-4 py-2">Discover QR Wallet →</a>
+    <!-- Values -->
+    <section id="values" class="py-20 md:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-brand font-semibold text-sm uppercase tracking-wider">What Drives Us</span>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-display font-bold tracking-tight">Mission, Vision & Values</h2>
         </div>
-        <!-- Card: Bone On Open Shopping -->
-        <div class="rounded-3xl border p-6 bg-white">
-          <img src="images/black shopping cart image.PNG" alt="Bone On Open Shopping Logo" class="w-full h-32 object-contain rounded-2xl mb-4" />
-          <div class="flex items-center justify-between">
-            <div class="font-semibold">Bone On Open Shopping</div>
-            <span class="rounded-xl bg-brandtint text-brand px-2 py-1 text-xs">Active</span>
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="card-hover rounded-3xl border bg-gradient-to-br from-brand to-brandlight p-8 text-white">
+            <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-4">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="font-display font-bold text-xl">Mission</div>
+            <p class="mt-3 text-white/90 leading-relaxed">To empower individuals and businesses with secure payments, modern commerce, sustainable food systems, and affordable internet.</p>
           </div>
-          <p class="mt-3 text-gray-600">Marketplace for SMEs with seamless QR Wallet checkout and delivery partners.</p>
-          <ul class="mt-3 text-sm text-gray-700 space-y-2">
-            <li class="flex items-center gap-2">✓ Seller tools</li>
-            <li class="flex items-center gap-2">✓ QR checkout</li>
-            <li class="flex items-center gap-2">✓ Escrow‑style flows</li>
-          </ul>
-          <a href="#" class="mt-5 block rounded-2xl border border-brand bg-brandtint text-center text-brand px-4 py-2">Visit the Shop →</a>
-        </div>
-        <!-- Card: Bone Farms -->
-        <div class="rounded-3xl border p-6 bg-white">
-          <img src="images/green farm image.png" alt="Bone Farms Logo" class="w-full h-32 object-contain rounded-2xl mb-4" />
-          <div class="flex items-center justify-between">
-            <div class="font-semibold">Bone Farms</div>
-            <span class="rounded-xl bg-brandtint text-brand px-2 py-1 text-xs">Active</span>
+          <div class="card-hover rounded-3xl border bg-white p-8">
+            <div class="w-12 h-12 rounded-xl bg-brandtint flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-brand" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="font-display font-bold text-xl text-gray-900">Vision</div>
+            <p class="mt-3 text-gray-600 leading-relaxed">An Africa where opportunity is evenly distributed—because access to money movement, markets, and connectivity is universal.</p>
           </div>
-          <p class="mt-3 text-gray-600">Export‑grade produce: avocados, mangoes, coconuts, and fish farming.</p>
-          <ul class="mt-3 text-sm text-gray-700 space-y-2">
-            <li class="flex items-center gap-2">✓ Traceability</li>
-            <li class="flex items-center gap-2">✓ Cold‑chain partners</li>
-            <li class="flex items-center gap-2">✓ Outgrower network</li>
-          </ul>
-          <a href="#" class="mt-5 block rounded-2xl border border-brand bg-brandtint text-center text-brand px-4 py-2">Explore Bone Farms →</a>
-        </div>
-        <!-- Card: BoneConnect -->
-        <div class="rounded-3xl border p-6 bg-white">
-          <img src="images/blue connectivity globe.png" alt="BoneConnect Logo" class="w-full h-32 object-contain rounded-2xl mb-4" />
-          <div class="flex items-center justify-between">
-            <div class="font-semibold">BoneConnect</div>
-            <span class="rounded-xl bg-brandtint text-brand px-2 py-1 text-xs">Active</span>
+          <div class="card-hover rounded-3xl border bg-white p-8">
+            <div class="w-12 h-12 rounded-xl bg-brandtint flex items-center justify-center mb-4">
+              <svg class="w-6 h-6 text-brand" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="font-display font-bold text-xl text-gray-900">Values</div>
+            <ul class="mt-3 text-gray-600 space-y-2">
+              <li class="check-item">Integrity & compliance first</li>
+              <li class="check-item">Customer obsession</li>
+              <li class="check-item">Build local, meet global standards</li>
+            </ul>
           </div>
-          <p class="mt-3 text-gray-600">Affordable internet initiatives for schools and rural communities.</p>
-          <ul class="mt-3 text-sm text-gray-700 space-y-2">
-            <li class="flex items-center gap-2">✓ School Wi‑Fi</li>
-            <li class="flex items-center gap-2">✓ Hybrid backhaul</li>
-            <li class="flex items-center gap-2">✓ Student bundles</li>
-          </ul>
-          <a href="#" class="mt-5 block rounded-2xl border border-brand bg-brandtint text-center text-brand px-4 py-2">See Connectivity Plan →</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Values -->
-  <section id="values" class="py-16 md:py-24">
-    <div class="mx-auto max-w-7xl px-6 grid gap-8 md:grid-cols-3">
-      <div class="rounded-3xl border p-6">
-        <div class="font-semibold">Mission</div>
-        <p class="mt-3 text-gray-600">To empower individuals and businesses with secure payments, modern commerce, sustainable food systems, and affordable internet.</p>
+    <!-- Roadmap -->
+    <section id="roadmap" class="py-20 md:py-28 bg-gradient-to-b from-brandtint2 to-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-brand font-semibold text-sm uppercase tracking-wider">Our Journey</span>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-display font-bold tracking-tight">Roadmap</h2>
+          <p class="mt-4 text-lg text-gray-600">Our planned milestones for the coming quarters.</p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="card-hover rounded-3xl border bg-white p-8 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand to-brandlight"></div>
+            <div class="inline-flex items-center gap-2 rounded-full bg-brandtint px-3 py-1 text-sm text-brand font-medium mb-4">
+              <span class="w-2 h-2 bg-brand rounded-full"></span>
+              Q4 2025
+            </div>
+            <ul class="text-gray-700 space-y-3">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"/>
+                </svg>
+                <span>Pilot QR Wallet with bank & MoMo partners</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"/>
+                </svg>
+                <span>Launch Bone On Open Shopping MVP</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"/>
+                </svg>
+                <span>Farm outgrower onboarding</span>
+              </li>
+            </ul>
+          </div>
+          <div class="card-hover rounded-3xl border bg-white p-8 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand to-brandlight"></div>
+            <div class="inline-flex items-center gap-2 rounded-full bg-brandtint px-3 py-1 text-sm text-brand font-medium mb-4">
+              <span class="w-2 h-2 bg-brand rounded-full"></span>
+              Q1 2026
+            </div>
+            <ul class="text-gray-700 space-y-3">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"/>
+                </svg>
+                <span>Public QR Wallet launch in Africa</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"/>
+                </svg>
+                <span>Export pipeline for mango & avocado</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"/>
+                </svg>
+                <span>Connectivity PoC in 3 schools</span>
+              </li>
+            </ul>
+          </div>
+          <div class="card-hover rounded-3xl border bg-white p-8 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand to-brandlight"></div>
+            <div class="inline-flex items-center gap-2 rounded-full bg-brandtint px-3 py-1 text-sm text-brand font-medium mb-4">
+              <span class="w-2 h-2 bg-brand rounded-full"></span>
+              Q2 2026
+            </div>
+            <ul class="text-gray-700 space-y-3">
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"/>
+                </svg>
+                <span>Shop vendor growth to 500+</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"/>
+                </svg>
+                <span>BoneConnect student bundles</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"/>
+                </svg>
+                <span>Regional expansion planning</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="rounded-3xl border p-6">
-        <div class="font-semibold">Vision</div>
-        <p class="mt-3 text-gray-600">An Africa where opportunity is evenly distributed—because access to money movement, markets, and connectivity is universal.</p>
-      </div>
-      <div class="rounded-3xl border p-6">
-        <div class="font-semibold">Values</div>
-        <ul class="mt-3 text-gray-700 space-y-2">
-          <li class="flex gap-2">✓ Integrity & compliance first</li>
-          <li class="flex gap-2">✓ Customer obsession</li>
-          <li class="flex gap-2">✓ Build local, meet global standards</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Roadmap -->
-  <section id="roadmap" class="py-16 md:py-24" style="background-color:#FFF7ED">
-    <div class="mx-auto max-w-7xl px-6">
-      <h2 class="text-3xl font-semibold tracking-tight">Roadmap</h2>
-      <div class="mt-8 grid gap-6 md:grid-cols-3">
-        <div class="rounded-3xl border p-6 bg-white">
-          <div class="font-semibold">Q4 2025</div>
-          <ul class="mt-3 text-gray-700 space-y-2">
-            <li class="flex gap-2">→ Pilot QR Wallet with bank & MoMo partners</li>
-            <li class="flex gap-2">→ Launch Bone On Open Shopping MVP</li>
-            <li class="flex gap-2">→ Farm outgrower onboarding</li>
-          </ul>
+    <!-- Contact -->
+    <section id="contact" class="py-20 md:py-28">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 grid gap-12 lg:grid-cols-2">
+        <div>
+          <span class="text-brand font-semibold text-sm uppercase tracking-wider">Get In Touch</span>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-display font-bold tracking-tight">Let's build together</h2>
+          <p class="mt-4 text-lg text-gray-600">Partners, suppliers, investors, and schools—we'd love to hear from you.</p>
+          <div class="mt-8 space-y-4">
+            <a class="flex items-center gap-4 p-4 rounded-xl bg-brandtint hover:bg-brand/10 transition-colors group" href="mailto:info@bonegroups.co">
+              <div class="w-12 h-12 rounded-xl bg-brand flex items-center justify-center">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900 group-hover:text-brand transition-colors">info@bonegroups.co</div>
+                <div class="text-sm text-gray-500">Email us anytime</div>
+              </div>
+            </a>
+            <div class="flex items-center gap-4 p-4 rounded-xl bg-gray-50">
+              <div class="w-12 h-12 rounded-xl bg-gray-200 flex items-center justify-center">
+                <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">+233 (0) ————</div>
+                <div class="text-sm text-gray-500">Call us</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 p-4 rounded-xl bg-gray-50">
+              <div class="w-12 h-12 rounded-xl bg-gray-200 flex items-center justify-center">
+                <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <div class="font-semibold text-gray-900">Accra, Ghana</div>
+                <div class="text-sm text-gray-500">Our headquarters</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="rounded-3xl border p-6 bg-white">
-          <div class="font-semibold">Q1 2026</div>
-          <ul class="mt-3 text-gray-700 space-y-2">
-            <li class="flex gap-2">→ Public QR Wallet launch in Africa</li>
-            <li class="flex gap-2">→ Export pipeline for mango & avocado</li>
-            <li class="flex gap-2">→ Connectivity PoC in 3 schools</li>
-          </ul>
-        </div>
-        <div class="rounded-3xl border p-6 bg-white">
-          <div class="font-semibold">Q2 2026</div>
-          <ul class="mt-3 text-gray-700 space-y-2">
-            <li class="flex gap-2">→ Shop vendor growth to 500+</li>
-            <li class="flex gap-2">→ BoneConnect student bundles</li>
-            <li class="flex gap-2">→ Regional expansion planning</li>
-          </ul>
+        <div class="card-hover rounded-3xl border bg-white p-8 shadow-lg">
+          <div class="font-display font-bold text-xl mb-6">Send us a message</div>
+          <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html" class="space-y-4">
+            <!-- Hidden fields for Netlify -->
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden">
+              <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
+            <div>
+              <label for="fullname" class="block text-sm font-medium text-gray-700 mb-1">Full name</label>
+              <input id="fullname" name="fullname" required placeholder="John Doe" autocomplete="name" class="w-full rounded-xl border border-gray-200 px-4 py-3 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+              <input id="email" name="email" type="email" required placeholder="john@example.com" autocomplete="email" class="w-full rounded-xl border border-gray-200 px-4 py-3 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all" />
+            </div>
+            <div>
+              <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company / Organization</label>
+              <input id="company" name="company" placeholder="Your company name" autocomplete="organization" class="w-full rounded-xl border border-gray-200 px-4 py-3 focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all" />
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+              <textarea id="message" name="message" required placeholder="How can we help you?" class="w-full rounded-xl border border-gray-200 px-4 py-3 min-h-[140px] focus:border-brand focus:ring-2 focus:ring-brand/20 outline-none transition-all resize-none"></textarea>
+            </div>
+            <button type="submit" class="w-full btn-primary rounded-xl text-white px-6 py-3.5 font-semibold">
+              Send message
+            </button>
+          </form>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-16 md:py-24">
-    <div class="mx-auto max-w-7xl px-6 grid gap-8 md:grid-cols-2">
-      <div>
-        <h2 class="text-3xl font-semibold tracking-tight">Let’s build together</h2>
-        <p class="mt-3 text-gray-600">Partners, suppliers, investors, and schools—we’d love to hear from you.</p>
-        <div class="mt-6 space-y-3 text-gray-700">
-          <a class="flex items-center gap-3" href="mailto:info@bonegroups.co">✉ info@bonegroups.co</a>
-          <div class="flex items-center gap-3">☎ +233 (0) ————</div>
-          <div class="flex items-center gap-3">📍 Accra, Ghana</div>
-        </div>
-      </div>
-      <div class="rounded-3xl border p-6 bg-white">
-        <div class="font-semibold mb-3">Contact form</div>
-        <form id="contactForm" class="space-y-3">
-          <div>
-            <label for="fullname" class="sr-only">Full name</label>
-            <input id="fullname" name="fullname" required placeholder="Full name" autocomplete="name" class="w-full rounded-2xl border px-4 py-2" />
-          </div>
-          <div>
-            <label for="email" class="sr-only">Email</label>
-            <input id="email" name="email" type="email" required placeholder="Email" autocomplete="email" class="w-full rounded-2xl border px-4 py-2" />
-          </div>
-          <div>
-            <label for="company" class="sr-only">Company / Organization</label>
-            <input id="company" name="company" placeholder="Company / Organization" autocomplete="organization" class="w-full rounded-2xl border px-4 py-2" />
-          </div>
-          <div>
-            <label for="message" class="sr-only">How can we help?</label>
-            <textarea id="message" name="message" required placeholder="How can we help?" class="w-full rounded-2xl border px-4 py-2 min-h-[120px]"></textarea>
-          </div>
-          <button type="submit" class="rounded-2xl bg-brand text-white px-4 py-2">Send message</button>
-        </form>
-      </div>
-    </div>
-  </section>
+    </section>
   </main>
 
   <!-- Footer -->
-  <footer class="border-t py-10">
-    <div class="mx-auto max-w-7xl px-6 flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-      <div class="flex items-center gap-3">
-        <div class="h-9 w-9 rounded-2xl bg-brand text-white grid place-content-center">BG</div>
-        <div>
-          <div class="font-semibold">Bone Groups of Companies</div>
-          <div class="text-sm text-gray-500">© <span id="year"></span> All rights reserved.</div>
+  <footer class="border-t bg-gray-50 py-12">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+        <div class="flex items-center gap-4">
+          <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-brand to-brandlight text-white grid place-content-center font-display font-bold text-lg shadow-md">BG</div>
+          <div>
+            <div class="font-display font-bold text-lg">Bone Groups of Companies</div>
+            <div class="text-sm text-gray-500">© <span id="year"></span> All rights reserved.</div>
+          </div>
         </div>
-      </div>
-      <div class="flex flex-wrap gap-4 text-sm text-gray-600">
-        <a href="#about" class="hover:text-gray-900">About</a>
-        <a href="#subsidiaries" class="hover:text-gray-900">Subsidiaries</a>
-        <a href="#values" class="hover:text-gray-900">Mission</a>
-        <a href="#roadmap" class="hover:text-gray-900">Roadmap</a>
-        <a href="#contact" class="hover:text-gray-900">Contact</a>
-        <a href="#" class="hover:text-gray-900">Privacy</a>
-        <a href="#" class="hover:text-gray-900">Terms</a>
+        <div class="flex flex-wrap gap-6 text-sm">
+          <a href="#about" class="text-gray-600 hover:text-brand transition-colors">About</a>
+          <a href="#subsidiaries" class="text-gray-600 hover:text-brand transition-colors">Subsidiaries</a>
+          <a href="#values" class="text-gray-600 hover:text-brand transition-colors">Mission</a>
+          <a href="#roadmap" class="text-gray-600 hover:text-brand transition-colors">Roadmap</a>
+          <a href="#contact" class="text-gray-600 hover:text-brand transition-colors">Contact</a>
+          <a href="#" class="text-gray-600 hover:text-brand transition-colors">Privacy</a>
+          <a href="#" class="text-gray-600 hover:text-brand transition-colors">Terms</a>
+        </div>
       </div>
     </div>
   </footer>
 
   <!-- Floating CTA -->
-  <a href="#contact" class="fixed bottom-6 right-6 rounded-full border border-brand bg-white shadow-lg px-4 py-3">Chat with us</a>
+  <a href="#contact" class="fixed bottom-6 right-6 btn-primary rounded-full shadow-xl px-5 py-3.5 text-white font-medium flex items-center gap-2 z-40">
+    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+      <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+    </svg>
+    Chat with us
+  </a>
 
   <script>
     // Mobile menu toggle
     const mobileMenu = document.getElementById('mobileMenu');
-    document.getElementById('menuBtn').addEventListener('click', () => {
+    const menuBtn = document.getElementById('menuBtn');
+    menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
     // Close mobile menu when a link is clicked
@@ -413,20 +732,18 @@
     });
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
-    // Contact form handler
-    document.getElementById('contactForm').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const btn = e.target.querySelector('button[type="submit"]');
-      const originalText = btn.textContent;
+    // Contact form handler for Netlify
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      const btn = this.querySelector('button[type="submit"]');
       btn.textContent = 'Sending...';
       btn.disabled = true;
-      // Simulate sending (replace with actual backend call)
+      
+      // Let Netlify handle the form - this just updates the button state
+      // Form will submit naturally to Netlify
       setTimeout(() => {
-        alert('Thanks! We\'ll get back to you.');
-        e.target.reset();
-        btn.textContent = originalText;
+        btn.textContent = 'Send message';
         btn.disabled = false;
-      }, 500);
+      }, 3000);
     });
   </script>
 </body>

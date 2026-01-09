@@ -1,0 +1,37 @@
+# Netlify Configuration for Bone Groups
+
+[build]
+  publish = "."
+
+# Redirect HTTP to HTTPS
+[[redirects]]
+  from = "http://bongroups.com/*"
+  to = "https://bongroups.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.bongroups.com/*"
+  to = "https://bongroups.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.bongroups.com/*"
+  to = "https://bongroups.com/:splat"
+  status = 301
+  force = true
+
+# Custom 404 page (optional - create 404.html if you want custom)
+# [[redirects]]
+#   from = "/*"
+#   to = "/404.html"
+#   status = 404
+
+# Form notifications
+[build.environment]
+  NODE_VERSION = "18"
+
+# Plugins
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
