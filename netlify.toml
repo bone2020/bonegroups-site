@@ -5,20 +5,20 @@
 
 # Redirect HTTP to HTTPS
 [[redirects]]
-  from = "http://bongroups.com/*"
-  to = "https://bongroups.com/:splat"
+  from = "http://bongroups.co/*"
+  to = "https://bongroups.co/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "http://www.bongroups.com/*"
-  to = "https://bongroups.com/:splat"
+  from = "http://www.bongroups.co/*"
+  to = "https://bongroups.co/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "https://www.bongroups.com/*"
-  to = "https://bongroups.com/:splat"
+  from = "https://www.bongroups.co/*"
+  to = "https://bongroups.co/:splat"
   status = 301
   force = true
 
